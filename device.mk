@@ -16,6 +16,9 @@ TARGET_SCREEN_HEIGHT := 1640
 TARGET_SCREEN_WIDTH := 720
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
 	FrameworksResOverlayLG7n \
     SettingsProviderOverlayLG7n \

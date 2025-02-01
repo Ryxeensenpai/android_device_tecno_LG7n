@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/tecno/LG7n/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 BOARD_VENDOR := TECNO
-PRODUCT_NAME := lineage_LG7n
+PRODUCT_NAME := infinity_LG7n
 PRODUCT_DEVICE := LG7n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -26,3 +26,16 @@ PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=LG7n \
     BuildFingerprint=TECNO/LG7n-GL/TECNO-LG7n:12/SP1A.210812.016/240530V1260:user/release-keys
+
+# Infinity X
+INFINITY_MAINTAINER := "Ren (Shirayuki39/Shirayuki428)"
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
+
+PRODUCT_SYSTEM_PROPERTIES += \
+   ro.infinity.soc=Helio G99 \
+   ro.infinity.battery=6000 mAh \
+   ro.infinity.display=720x1640, 90 Hz \
+   ro.infinity.camera=50MP + 8MP \
+   ro.product.marketname=TECNO POVA 4
